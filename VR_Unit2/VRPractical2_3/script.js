@@ -10,4 +10,18 @@ window.addEventListener("DOMContentLoaded",function() {
     let tree = new Tree(x, 0 , z);
   }
 
+
+  for(let i = 0; i < 10; i++){
+    let x = rnd(-30,30);
+    let z = rnd(-30,30);
+    let cloud = new Cloud(x, 4 , z);
+  }
+
+  for(let i = 0; i < 10; i++){
+    let x = rnd(-10,10);
+    let z = rnd(-10,10);
+    let house = new House(x, 0 , z);
+  }
+
+
 })

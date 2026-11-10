@@ -4,7 +4,7 @@ class Rocket {
         this.y = y;
         this.z = z;
         
-        this.dy = Math.random() * 0.2 + 0.05; 
+        this.dy = Math.random() * 0.2; 
         
         this.obj = document.createElement("a-entity");
 
@@ -26,7 +26,7 @@ class Rocket {
         let flame = document.createElement("a-cone");
         head.setAttribute("radius-top","0");
         head.setAttribute("radius-bottom","0.9");
-        flame.setAttribute("color", "orange");
+        flame.setAttribute("src", "fire2.jpg");
         flame.setAttribute("height", "2");
         flame.setAttribute("rotation", "-180 0 0");
         flame.setAttribute("position", {x: 0, y: -3, z: -2});

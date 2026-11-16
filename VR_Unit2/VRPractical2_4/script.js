@@ -19,11 +19,11 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 function loop() {
-    for (let i = 0; i < rockets.length; i++) {
-        rockets[i].fly(); 
+    for (let r of rockets) {
+        r.fly(); 
     }
-    for (let i = 0; i < ufos.length; i++) {
-        ufos[i].invade(); 
+    for (let u of ufos) {
+        u.invade(); 
     }
     
     window.requestAnimationFrame(loop);

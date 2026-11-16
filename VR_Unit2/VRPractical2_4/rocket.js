@@ -17,17 +17,17 @@ class Rocket {
         this.obj.append(head);
 
         let body = document.createElement("a-cylinder");
-        body.setAttribute("color", "gray");
+        body.setAttribute("src", "carskin.jpg");
         body.setAttribute("radius", "0.5");
         body.setAttribute("height", "2");
         body.setAttribute("position", {x: 0, y: -1.5, z: -2});
         this.obj.append(body);
 
         let flame = document.createElement("a-cone");
-        head.setAttribute("radius-top","0");
-        head.setAttribute("radius-bottom","0.9");
+        flame.setAttribute("radius-top","0");
+        flame.setAttribute("radius-bottom","0.4");
         flame.setAttribute("src", "fire2.jpg");
-        flame.setAttribute("height", "2");
+        flame.setAttribute("height", "3");
         flame.setAttribute("rotation", "-180 0 0");
         flame.setAttribute("position", {x: 0, y: -3, z: -2});
         this.obj.append(flame);

@@ -1,8 +1,10 @@
 class UFO {
     constructor(x, y, z) {
         this.x = x;
-        this.y = 65;
+        this.y = y;
         this.z = z;
+
+        this.y = Math.random() + 75
         
         this.dy = Math.random() * 0.1; 
         

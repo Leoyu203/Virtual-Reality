@@ -11,18 +11,21 @@
 */
 
 let maze = [
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "ooooooooo--ooooooooooo",
+  "o---x-u---x-----u---oo",
+  "o-x-x-xxx-x-xxxxxxx-xo",
+  "o-x---x---x-------x--o",
+  "o-xxxxx-xxxxxxxxx-xx-o",
+  "o-----x--u----x------o",
+  "oxxxx-xxxxxxx-x-xxxxxo",
+  "o-u-x---x-----x------o",
+  "o-x-xxx-x-xxxxxxxxxx-o",
+  "o-x-----x----------x-o",
+  "o-xxxxxxx-xxxxxxxx-x-o",
+  "o-------x----u---x---o",
+  "o-xxxxx-xxxxxxxx-xxx-o",
+  "o--------------------o",
+  "ooooooooo--ooooooooooo"
 ];
 
 /* Challenge 2
@@ -34,13 +37,19 @@ let scene;
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   for(let r = 0; r < maze.length; r++){
-    /* Challenge 3
-      Choose a technique to traverse the each character in the string.
-    */ 
-    /* Challenge 4
-       Make an appropriate decision based on the characters you chose to enter 
-       in the maze.  Create an instance of the corresponding object.
-    */
+     let row = maze[r];
+    let cols = row.split("");
+    for(let c = 0; c < cols.length; c++){
+      if(cols[c] == "x"){
+        new Rocket(c,1,r)
+      }
+      else if(cols[c] == "u"){
+        new UFO(c,1,r);
+      }else if(cols[c]=="o"){
+        new Cloud(c,1,r)
+      }
+    }
+
   }
 
 })
